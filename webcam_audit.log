@@ -1,0 +1,9 @@
+----
+type=PROCTITLE msg=audit(16.09.2023 20:19:04.421:392) : proctitle=auditctl -w /dev/video0 -p rwxa -k webcam 
+type=SYSCALL msg=audit(16.09.2023 20:19:04.421:392) : arch=x86_64 syscall=sendto success=yes exit=1076 a0=0x4 a1=0x7ffc8e1c84f0 a2=0x434 a3=0x0 items=0 ppid=97648 pid=97649 auid=t1 uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts2 ses=3 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(16.09.2023 20:19:04.421:392) : auid=t1 ses=3 subj=unconfined op=add_rule key=webcam list=exit res=yes 
+----
+type=PROCTITLE msg=audit(16.09.2023 20:19:11.270:403) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(16.09.2023 20:19:11.270:403) : saddr={ saddr_fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(16.09.2023 20:19:11.270:403) : arch=x86_64 syscall=sendto success=yes exit=1076 a0=0x3 a1=0x7ffda41512c0 a2=0x434 a3=0x0 items=0 ppid=97663 pid=97673 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=CONFIG_CHANGE msg=audit(16.09.2023 20:19:11.270:403) : auid=unset ses=unset subj=unconfined op=remove_rule key=webcam list=exit res=yes 
